@@ -1,8 +1,10 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import TicketsContext from "../context/tickets";
 
 function TicketCreate() {
   const { createTicket } = useContext(TicketsContext);
+
+  const clickCountRef = useRef(0);
 
   const dates = [
     { value: "2025-07-20", label: "20.07.2025" },
@@ -34,6 +36,10 @@ function TicketCreate() {
     if (!name || selectedDates.length === 0 || !price) return;
 
     createTicket(name, selectedDates, price);
+
+    clickCountRef.current += 1;
+    console.log(`Kliknięto przycisk ${clickCountRef.current} razy`);
+
     setName("");
     setSelectedDates([]);
     setPrice("");
@@ -44,7 +50,12 @@ function TicketCreate() {
       <h3>Dodaj bilet</h3>
       <form onSubmit={handleSubmit}>
         <label>Nazwa</label>
-        <input className="input" onChange={handleNameChange} value={name} />
+        <input
+          type="text"
+          className="input"
+          onChange={handleNameChange}
+          value={name}
+        />
 
         <label>Daty</label>
         <div className="input">

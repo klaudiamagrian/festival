@@ -1,16 +1,19 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useMemo } from "react";
 import TicketsContext from "../context/tickets";
 
 function TicketEdit({ ticket, onSubmit }) {
   const { editTicketById } = useContext(TicketsContext);
 
-  const dates = [
-    { value: "2025-07-20", label: "20.07.2025" },
-    { value: "2025-07-21", label: "21.07.2025" },
-    { value: "2025-07-22", label: "22.07.2025" },
-    { value: "2025-07-23", label: "23.07.2025" },
-    { value: "2025-07-24", label: "24.07.2025" },
-  ];
+  const dates = useMemo(
+    () => [
+      { value: "2025-07-20", label: "20.07.2025" },
+      { value: "2025-07-21", label: "21.07.2025" },
+      { value: "2025-07-22", label: "22.07.2025" },
+      { value: "2025-07-23", label: "23.07.2025" },
+      { value: "2025-07-24", label: "24.07.2025" },
+    ],
+    []
+  );
 
   const [name, setName] = useState(ticket.name);
   const [selectedDates, setSelectedDates] = useState(ticket.dates || []);

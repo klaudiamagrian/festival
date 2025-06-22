@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useCallback } from "react";
 import ConcertEdit from "./ConcertEdit";
 import ConcertsContext from "../context/concerts";
 
@@ -6,17 +6,17 @@ function ConcertShow({ concert }) {
   const [showEdit, setShowEdit] = useState(false);
   const { deleteConcertById } = useContext(ConcertsContext);
 
-  const handleEditClick = () => {
-    setShowEdit(!showEdit);
-  };
+  const handleEditClick = useCallback(() => {
+    setShowEdit((prev) => !prev);
+  }, []);
 
-  const handleSubmit = () => {
+  const handleSubmit = useCallback(() => {
     setShowEdit(false);
-  };
+  }, []);
 
-  const handleDeleteClick = () => {
+  const handleDeleteClick = useCallback(() => {
     deleteConcertById(concert.id);
-  };
+  }, [deleteConcertById, concert.id]);
 
   let content = (
     <h3>

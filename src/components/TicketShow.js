@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useCallback } from "react";
 import TicketEdit from "./TicketEdit";
 import TicketsContext from "../context/tickets";
 
@@ -6,17 +6,18 @@ function TicketShow({ ticket }) {
   const [showEdit, setShowEdit] = useState(false);
   const { deleteTicketById } = useContext(TicketsContext);
 
-  const handleEditClick = () => {
-    setShowEdit(!showEdit);
-  };
+  const handleEditClick = useCallback(() => {
+    setShowEdit((prev) => !prev);
+  }, []);
 
-  const handleSubmit = () => {
-    setShowEdit(false);
-  };
-
-  const handleDeleteClick = () => {
+  const handleDeleteClick = useCallback(() => {
     deleteTicketById(ticket.id);
-  };
+  }, [deleteTicketById, ticket.id]);
+
+  // useCallback do przekazania stabilnej funkcji do memoizowanego TicketEdit
+  const handleSubmit = useCallback(() => {
+    setShowEdit(false);
+  }, []);
 
   let content = (
     <h3>
@@ -31,8 +32,9 @@ function TicketShow({ ticket }) {
     </h3>
   );
 
-  if (showEdit)
+  if (showEdit) {
     content = <TicketEdit ticket={ticket} onSubmit={handleSubmit} />;
+  }
 
   return (
     <div className="ticket-show">

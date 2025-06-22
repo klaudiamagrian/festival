@@ -1,16 +1,19 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useMemo } from "react";
 import ConcertsContext from "../context/concerts";
 
 function ConcertEdit({ concert, onSubmit }) {
   const { editConcertById } = useContext(ConcertsContext);
 
-  const dates = [
-    { value: "2025-07-20", label: "20.07.2025" },
-    { value: "2025-07-21", label: "21.07.2025" },
-    { value: "2025-07-22", label: "22.07.2025" },
-    { value: "2025-07-23", label: "23.07.2025" },
-    { value: "2025-07-24", label: "24.07.2025" },
-  ];
+  const dates = useMemo(
+    () => [
+      { value: "2025-07-20", label: "20.07.2025" },
+      { value: "2025-07-21", label: "21.07.2025" },
+      { value: "2025-07-22", label: "22.07.2025" },
+      { value: "2025-07-23", label: "23.07.2025" },
+      { value: "2025-07-24", label: "24.07.2025" },
+    ],
+    []
+  );
 
   const initialDate = dates.some((d) => d.value === concert.date)
     ? concert.date
