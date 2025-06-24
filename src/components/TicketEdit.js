@@ -39,11 +39,20 @@ function TicketEdit({ ticket, onSubmit }) {
   };
 
   return (
-    <div className="ticket-create">
+    <div className="ticket-edit">
       <h3>Edytuj bilet</h3>
+      <br />
+
       <form onSubmit={handleSubmit}>
         <label>Nazwa</label>
-        <input className="input" onChange={handleNameChange} value={name} />
+        <input
+          type="text"
+          className="input"
+          onChange={handleNameChange}
+          value={name}
+        />
+        <br />
+        <br />
 
         <label>Daty</label>
         <div className="checkbox-group">
@@ -59,8 +68,14 @@ function TicketEdit({ ticket, onSubmit }) {
             </label>
           ))}
         </div>
+        <br />
         <label>Cena</label>
-        <input className="input" onChange={handlePriceChange} value={price} />
+        <input
+          type="text"
+          className="input"
+          onChange={handlePriceChange}
+          value={price}
+        />
 
         <button className="button">Edytuj bilet</button>
       </form>

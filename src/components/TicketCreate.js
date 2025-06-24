@@ -72,7 +72,7 @@ function TicketCreate() {
           ))}
         </div>
         <label>Cena</label>
-        <input className="input" onChange={handlePriceChange} value={price} />
+        <input type="number" onChange={handlePriceChange} value={price} />
 
         <button className="button" type="submit">
           Dodaj bilet
