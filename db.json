@@ -1,0 +1,76 @@
+{
+  "concerts": [
+    {
+      "artist": "Bambi",
+      "date": "2025-07-21",
+      "image": "https://brakkultury.pl/wp-content/uploads/2023/11/BAMBI-IN-REAL-LIFE-CD-STANDARD-3796-680x680-1.png",
+      "id": "ca87"
+    },
+    {
+      "artist": "ASAP",
+      "date": "2025-07-21",
+      "image": "https://ntvb.tmsimg.com/assets/assets/673344_v9_bb.jpg",
+      "id": "21a7"
+    },
+    {
+      "id": "adf1",
+      "artist": "The Weeknd",
+      "date": "2025-07-23",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNTyRjBDsEh3wroF2yhNmlEaz1lkqNC1OFVw&s"
+    },
+    {
+      "artist": "The Rose",
+      "date": "2025-07-22",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/The_Rose_2023.jpg/1200px-The_Rose_2023.jpg",
+      "id": "38ee"
+    }
+  ],
+  "tickets": [
+    {
+      "name": "karnet",
+      "dates": [
+        "2025-07-20",
+        "2025-07-21",
+        "2025-07-22",
+        "2025-07-23",
+        "2025-07-24"
+      ],
+      "price": "1500",
+      "id": "8987"
+    },
+    {
+      "name": "poniedziałek",
+      "dates": [
+        "2025-07-21"
+      ],
+      "price": "1000",
+      "id": "38c5"
+    },
+    {
+      "name": "weekend jednak krótszy",
+      "dates": [
+        "2025-07-22",
+        "2025-07-23"
+      ],
+      "price": "600",
+      "id": "ec2c"
+    },
+    {
+      "name": "wtorek i środa",
+      "dates": [
+        "2025-07-21",
+        "2025-07-22"
+      ],
+      "price": "1450",
+      "id": "abf4"
+    },
+    {
+      "id": "93c8",
+      "name": "wtorek tylko",
+      "dates": [
+        "2025-07-21"
+      ],
+      "price": "120"
+    }
+  ]
+}

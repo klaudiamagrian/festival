@@ -1,0 +1,287 @@
+/* Reset & base */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #ffe259, #ffa751);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  padding: 20px 0;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Layout */
+.app {
+  max-width: 95vw;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fffbe7;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Concert/Ticket Dates */
+.concert-day,
+.ticket-day {
+  margin-bottom: 50px;
+}
+
+.concert-date,
+.ticket-date {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff5722;
+  margin-bottom: 25px;
+  border-left: 6px solid #ff9800;
+  padding-left: 15px;
+}
+
+/* Lists */
+.concert-list,
+.ticket-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Concert Create Form */
+.concert-create {
+  background-color: #fff;
+  border: 2px solid #ff9800;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 16px rgba(255, 152, 0, 0.2);
+}
+
+.concert-create h2 {
+  margin-top: 0;
+  color: #ff5722;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.concert-create input,
+.concert-create select,
+.concert-create textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fffdf7;
+}
+
+.concert-create button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.concert-create button:hover {
+  background-color: #e64a19;
+  transform: scale(1.03);
+}
+
+/* Artist Cards */
+.concert-show,
+.ticket-show {
+  background-color: #ffffff;
+  border: 2px solid #ffd54f;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 200px;
+  box-sizing: border-box;
+}
+
+.concert-show:hover,
+.ticket-show:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.concert-show img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.concert-show h3,
+.ticket-show h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Action Buttons */
+.actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.25s ease-in-out;
+  font-size: 0.95rem;
+}
+
+button.edit {
+  background-color: #03a9f4;
+  color: white;
+}
+
+button.edit:hover {
+  background-color: #0288d1;
+}
+
+button.delete {
+  background-color: #e91e63;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #c2185b;
+}
+
+/* Navbar */
+.navbar {
+  max-width: 95vw;
+  margin: 0 auto 40px;
+  padding: 0 1rem;
+  height: 60px;
+  background: linear-gradient(to right, #7b4397, #dc2430);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Forms */
+.ticket-create,
+.ticket-edit {
+  background-color: #fff;
+  border: 2px solid #4caf50;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 16px rgba(76, 175, 80, 0.2);
+  margin-bottom: 30px;
+}
+
+.ticket-create h2,
+.ticket-edit h2 {
+  margin-top: 0;
+  color: #388e3c;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.ticket-create label,
+.ticket-edit label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.ticket-create input[type="text"],
+.ticket-create input[type="number"],
+.ticket-edit input[type="text"],
+.ticket-edit input[type="number"] {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.date-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.date-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background-color: #ffe0f0;
+  font-weight: 500;
+}
+
+.ticket-create button,
+.ticket-edit button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ticket-create button:hover,
+.ticket-edit button:hover {
+  background-color: #388e3c;
+}
