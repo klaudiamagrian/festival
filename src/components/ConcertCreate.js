@@ -22,6 +22,10 @@ function ConcertCreate() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!artist.trim() || !date.trim() || !image.trim()) {
+      alert("Wszystkie pola muszą być wypełnione.");
+      return;
+    }
     createConcert(artist, date, image);
     setArtist("");
     setDate(dates[0].value);

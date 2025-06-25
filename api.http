@@ -1,0 +1,71 @@
+GET http://localhost:3001/concerts
+
+###
+
+POST http://localhost:3001/concerts
+
+{
+    "artist": "",
+      "date": "",
+      "image": ""
+}
+
+###
+
+DELETE http://localhost:3001/concerts/${id}
+
+{
+  "artist": "",
+      "date": "",
+      "image": ""
+}
+
+###
+
+PUT http://localhost:3001/concerts/${id}
+
+{
+      "artist": "",
+      "date": "",
+      "image": ""
+}
+
+###
+
+GET http://localhost:3001/tickets
+
+
+###
+
+POST http://localhost:3001/tickets
+
+{
+    "name": "karnet 2-dniowy",
+      "dates": [
+        "2025-07-21","2025-07-22"
+      ],
+      "price": "900"
+}
+
+###
+
+DELETE http://localhost:3001/tickets/${id}
+
+{
+    "name": "",
+      "dates": [
+        ""
+      ],
+      "price": "",
+}
+
+###
+PUT http://localhost:3001/tickets/${id}
+
+{
+    "name": "",
+      "dates": [
+        ""
+      ],
+      "price": "",
+}

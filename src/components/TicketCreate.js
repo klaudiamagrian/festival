@@ -33,8 +33,10 @@ function TicketCreate() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!name || selectedDates.length === 0 || !price) return;
-
+    if (!name || selectedDates.length === 0 || !price) {
+      alert("Wszystkie pola muszą być wypełnione.");
+      return;
+    }
     createTicket(name, selectedDates, price);
 
     clickCountRef.current += 1;

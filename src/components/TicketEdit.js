@@ -34,6 +34,10 @@ function TicketEdit({ ticket, onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!name || selectedDates.length === 0 || !price) {
+      alert("Wszystkie pola muszą być wypełnione.");
+      return;
+    }
     editTicketById(ticket.id, name, selectedDates, price);
     onSubmit();
   };

@@ -39,7 +39,7 @@
       "id": "8987"
     },
     {
-      "name": "poniedziałek",
+      "name": "bilet jednodniowy",
       "dates": [
         "2025-07-21"
       ],
@@ -56,7 +56,7 @@
       "id": "ec2c"
     },
     {
-      "name": "wtorek i środa",
+      "name": "karnet 2-dniowy",
       "dates": [
         "2025-07-21",
         "2025-07-22"
@@ -65,12 +65,21 @@
       "id": "abf4"
     },
     {
-      "id": "93c8",
-      "name": "wtorek tylko",
+      "name": "bilet jednodniowy",
       "dates": [
         "2025-07-21"
       ],
-      "price": "120"
+      "price": "120",
+      "id": "93c8"
+    },
+    {
+      "id": "1c62",
+      "name": "karnet 2-dniowy",
+      "dates": [
+        "2025-07-21",
+        "2025-07-22"
+      ],
+      "price": "900"
     }
   ]
 }

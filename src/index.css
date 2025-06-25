@@ -1,4 +1,3 @@
-/* Reset & base */
 body {
   font-family: "Segoe UI", sans-serif;
   background: linear-gradient(to right, #ffe259, #ffa751);
@@ -7,7 +6,6 @@ body {
   color: #333;
 }
 
-/* Header */
 .header {
   text-align: center;
   font-size: 3rem;
@@ -22,7 +20,6 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Layout */
 .app {
   max-width: 95vw;
   margin: 40px auto;
@@ -32,7 +29,6 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Concert/Ticket Dates */
 .concert-day,
 .ticket-day {
   margin-bottom: 50px;
@@ -48,7 +44,6 @@ body {
   padding-left: 15px;
 }
 
-/* Lists */
 .concert-list,
 .ticket-list {
   display: grid;
@@ -57,7 +52,6 @@ body {
   justify-items: center;
 }
 
-/* Concert Create Form */
 .concert-create {
   background-color: #fff;
   border: 2px solid #ff9800;
@@ -105,7 +99,6 @@ body {
   transform: scale(1.03);
 }
 
-/* Artist Cards */
 .concert-show,
 .ticket-show {
   background-color: #ffffff;
@@ -140,7 +133,6 @@ body {
   color: #333;
 }
 
-/* Action Buttons */
 .actions {
   margin-top: 15px;
   display: flex;
@@ -176,7 +168,6 @@ button.delete:hover {
   background-color: #c2185b;
 }
 
-/* Navbar */
 .navbar {
   max-width: 95vw;
   margin: 0 auto 40px;
@@ -217,7 +208,6 @@ button.delete:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Forms */
 .ticket-create,
 .ticket-edit {
   background-color: #fff;

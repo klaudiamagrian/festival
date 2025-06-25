@@ -30,6 +30,10 @@ function ConcertEdit({ concert, onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!artist.trim() || !date.trim() || !image.trim()) {
+      alert("Wszystkie pola muszą być wypełnione.");
+      return;
+    }
     editConcertById(concert.id, artist, date, image);
     onSubmit();
   };

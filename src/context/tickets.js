@@ -22,7 +22,7 @@ function TicketProvider({ children }) {
 
     const updatedTickets = [
       ...tickets,
-      { id: response.data.id, name: name, dates: dates, price: price }, // też `dates`
+      { id: response.data.id, name: name, dates: dates, price: price },
     ];
     setTickets(updatedTickets);
   };

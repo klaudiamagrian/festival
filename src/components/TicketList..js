@@ -5,7 +5,6 @@ import TicketShow from "./TicketShow";
 function TicketList() {
   const { tickets } = useContext(TicketsContext);
 
-  // Grupowanie według liczby dni
   const ticketsByDuration = tickets.reduce((groups, ticket) => {
     const duration = (ticket.dates || []).length;
     if (!groups[duration]) {

@@ -14,7 +14,6 @@ function TicketShow({ ticket }) {
     deleteTicketById(ticket.id);
   }, [deleteTicketById, ticket.id]);
 
-  // useCallback do przekazania stabilnej funkcji do memoizowanego TicketEdit
   const handleSubmit = useCallback(() => {
     setShowEdit(false);
   }, []);
